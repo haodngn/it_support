@@ -17,19 +17,19 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 90, 0, 40),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Container(
-                    width: 130,
-                    height: 130,
+                    width: 380,
+                    height: 300,
                     // padding: EdgeInsets.all(15),
                     // decoration: BoxDecoration(
                     //     shape: BoxShape.circle, color: Colors.blue),
-                    child: Image.asset('assets/images/logo_app.png')),
+                    child: Image.asset('assets/images/logo.jpg')),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
                 child: Text(
-                  "Hello,\nWelcome Back",
+                  "Hello,\nWelcome Back !",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
