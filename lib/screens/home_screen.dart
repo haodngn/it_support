@@ -15,7 +15,7 @@ class HomeScreenCustomer extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Body(value: value),
+          child: Body(),
         ),
       ),
       bottomNavigationBar: const BottomNavBar(),

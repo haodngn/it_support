@@ -5,15 +5,14 @@ import 'package:it_support/screens/components/rounded_input_field.dart';
 import 'package:it_support/screens/it_support_list_screen.dart';
 
 class Body extends StatelessWidget {
-  final int value = 1;
-  const Body({Key? key, required int value}) : super(key: key);
+  const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(
         child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ClipRRect(
           borderRadius: BorderRadius.circular(25),
