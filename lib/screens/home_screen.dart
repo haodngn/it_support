@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:it_support/screens/components/body.dart';
-import 'package:it_support/screens/components/bottom_navbar.dart';
 
 class HomeScreenCustomer extends StatelessWidget {
   int value = 1;
