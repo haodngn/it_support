@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:it_support/screens/components/text_field_container.dart';
 
-class RoundedDropdownButton extends StatefulWidget {
-  const RoundedDropdownButton({Key? key}) : super(key: key);
+class DropdownButtonType extends StatefulWidget {
+  const DropdownButtonType({Key? key}) : super(key: key);
 
   @override
-  RoundedDropdownButtonState createState() => RoundedDropdownButtonState();
+  DropdownButtonTypeState createState() => DropdownButtonTypeState();
 }
 
-class RoundedDropdownButtonState extends State<RoundedDropdownButton> {
+class DropdownButtonTypeState extends State<DropdownButtonType> {
   //first item
-  String dropdownValue = 'Laptop';
+  String dropdownValue = 'Dell';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -40,7 +40,7 @@ class RoundedDropdownButtonState extends State<RoundedDropdownButton> {
               dropdownValue = newValue!;
             });
           },
-          items: <String>['PC', 'Laptop', 'Smart Phone']
+          items: <String>['MSI', 'HP', 'Dell', 'Lenovo', 'Acer']
               .map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,

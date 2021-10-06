@@ -10,12 +10,14 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-        height: size.height,
-        width: double.infinity,
-        child: Stack(
-          alignment: Alignment.center,
-          children: <Widget>[child],
-        ));
+    return SingleChildScrollView(
+      child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.fromLTRB(30, 50, 30, 0),
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[child],
+          )),
+    );
   }
 }
