@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:it_support/screens/bottom_nav_bar_screen.dart';
 import 'package:it_support/screens/forgot_password_screen.dart';
 import 'package:it_support/screens/home_screen.dart';
 import 'package:it_support/screens/register_screen.dart';
@@ -144,7 +145,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Widget backtoCustomerScreen(BuildContext context) {
-    return HomeScreenCustomer();
+    return BottomNavScreen();
   }
 
   void onSignInClicked() {}
