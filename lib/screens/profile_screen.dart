@@ -119,7 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: Icon(Icons.person, color: kWhiteColor,),
                               ),
                               Text(
-                                "Tài khoản của tôi",
+                                "Tài khoản",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
@@ -137,7 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       duration: Duration(milliseconds: 600))
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                  padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
                                   child: Icon(
                                     Icons.edit,
                                     color: kWhiteColor,
