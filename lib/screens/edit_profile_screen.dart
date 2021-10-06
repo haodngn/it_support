@@ -31,7 +31,7 @@ class _EditProfileState extends State<EditProfile> {
   void initState() {
     super.initState();
     setState(() {
-      selectedGender = "Female";
+      selectedGender = "Nữ";
     });
   }
 
@@ -63,7 +63,7 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Edit Profile",
+          "Chỉnh sửa thông tin cá nhân",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: kBlueColor,
@@ -118,7 +118,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
                         child: Text(
-                          "Name:",
+                          "Tên:",
                           style: TextStyle(
                             fontSize: 22,
                           ),
@@ -143,7 +143,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
                         child: Text(
-                          "Gender:",
+                          "Giới tính:",
                           style: TextStyle(
                             fontSize: 22,
                           ),
@@ -152,7 +152,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(80, 5, 0, 0),
                         child: Radio(
-                          value: "Male",
+                          value: "Nam",
                           groupValue: selectedGender,
                           onChanged: (value) {
                             setSelectedGender(value);
@@ -162,7 +162,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(120, 18, 0, 0),
                         child: Text(
-                          "Male",
+                          "Name",
                           style: TextStyle(
                             fontSize: 19,
                           ),
@@ -171,7 +171,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(185, 5, 0, 0),
                         child: Radio(
-                          value: "Female",
+                          value: "Nữ",
                           groupValue: selectedGender,
                           onChanged: (value) {
                             setSelectedGender(value);
@@ -181,7 +181,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(225, 18, 0, 0),
                         child: Text(
-                          "Female",
+                          "Nữ",
                           style: TextStyle(
                             fontSize: 19,
                           ),
@@ -195,7 +195,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 18, 20, 0),
                         child: Text(
-                          "DOB:",
+                          "Ngày sinh:",
                           style: TextStyle(
                             fontSize: 22,
                           ),
@@ -229,7 +229,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 15, 20, 0),
                         child: Text(
-                          "Phone:",
+                          "Di Động:",
                           style: TextStyle(
                             fontSize: 22,
                           ),
@@ -284,7 +284,7 @@ class _EditProfileState extends State<EditProfile> {
                           transition: Transition.rightToLeftWithFade,
                           duration: Duration(milliseconds: 600)),
                       child: Text(
-                        "Save",
+                        "Lưu",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,

@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
                 child: Text(
-                  "Hello,\nWelcome Back !",
+                  "Xin Chào,\nMừng bạn trở lại !",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                 child: TextField(
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
-                      labelText: "USERNAME",
+                      labelText: "TÊN ĐĂNG NHẬP",
                       labelStyle:
                           TextStyle(color: Color(0xff888888), fontSize: 15)),
                 ),
@@ -56,13 +56,13 @@ class LoginScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 18, color: Colors.black),
                       obscureText: true,
                       decoration: InputDecoration(
-                          labelText: "PASSWORD",
+                          labelText: "MẬT KHẨU",
                           labelStyle: TextStyle(
                               color: Color(0xff888888), fontSize: 15)),
                     ),
                   ),
                   Text(
-                    "SHOW",
+                    "HIỆN",
                     style: TextStyle(
                         color: Colors.blue,
                         fontSize: 13,
@@ -90,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                             MaterialPageRoute(builder: backtoCustomerScreen));
                       },
                       child: Text(
-                        "SIGN IN",
+                        "ĐĂNG NHẬP",
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
@@ -105,7 +105,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     InkWell(
                       child: Text(
-                        "NEW USER? SIGN UP",
+                        "NGƯỜI DÙNG MỚI ?",
                         style:
                             TextStyle(fontSize: 15, color: Color(0xff888888)),
                       ),
@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     InkWell(
                       child: Text(
-                        "FORGOT PASSWORD?",
+                        "QUÊN MẬT KHẨU",
                         style: TextStyle(fontSize: 15, color: Colors.blue),
                       ),
                       onTap: () {

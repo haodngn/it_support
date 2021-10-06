@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:it_support/constant.dart';
 import 'package:it_support/screens/home_screen.dart';
 import 'package:it_support/screens/it_support_list_screen.dart';
-import 'package:it_support/screens/message_screen.dart';
+import 'package:it_support/screens/chat_screen/list_chat_screen.dart';
 import 'package:it_support/screens/profile_screen.dart';
 
 
@@ -17,7 +17,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final screens = [
     HomeScreenCustomer(),
     ListItScreen(),
-    MessageScreen(),
+    ListChatScreen(),
     ProfileScreen(),
   ];
   @override
@@ -37,19 +37,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",
+            label: "Trang chủ",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.format_list_bulleted),
-            label: "List ITSupport",
+            label: "Danh sách IT",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            label: "Chat",
+            label: "Trò truyện",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: "Profile",
+            label: "Hồ Sơ",
           ),
         ],
       ),

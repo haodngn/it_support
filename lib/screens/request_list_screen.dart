@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:it_support/constant.dart';
-import 'package:it_support/screens/components/it_card.dart';
+import 'package:it_support/screens/components/detail_card.dart';
 
-class ListItScreen extends StatelessWidget {
+class ListRequestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Danh Sách IT Hỗ Trợ"),
-        automaticallyImplyLeading: false,
+        title: Text("Danh Sách Yêu Cầu"),
         backgroundColor: kBlueColor,
       ),
       backgroundColor: kBackgroundColor,
@@ -17,21 +16,10 @@ class ListItScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: Text(
-                  'Chào, Chúng tôi có thể giúp gì cho bạn?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: kTitleTextColor,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
               SizedBox(
-                height: 20,
+                height: 140,
               ),
-              buildITList(),
+              buildDetailList(),
             ],
           ),
         ),
@@ -39,34 +27,34 @@ class ListItScreen extends StatelessWidget {
     );
   }
 
-  buildITList() {
+  buildDetailList() {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 30,
       ),
       child: Column(
         children: <Widget>[
-          ITCard(
-            'Nguyen Van A',
-            'Software Engineer\nFPT Software',
+          DetailCard(
+            'Nguyễn Văn A',
+            'Thiết bị : Laptop Asus',            
             'assets/images/Yeti.png',
             kBlueColor,
           ),
           SizedBox(
             height: 20,
           ),
-          ITCard(
-            'Nguyen Van B',
-            'AI Engineer\nFPT Software',
+          DetailCard(
+            'Nguyễn Văn B',
+            'Thiết bị : Iphone 13 pro max',
             'assets/images/Yeti.png',
             kYellowColor,
           ),
           SizedBox(
             height: 20,
           ),
-          ITCard(
-            'Nguyen Van C',
-            'Tester\nFPT Software',
+          DetailCard(
+            'Nguyễn Văn C',
+            'Thiết bị : PC',
             'assets/images/Yeti.png',
             kOrangeColor,
           ),

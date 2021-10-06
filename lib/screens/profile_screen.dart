@@ -119,7 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: Icon(Icons.person, color: kWhiteColor,),
                               ),
                               Text(
-                                "My Account",
+                                "Tài khoản",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
@@ -137,7 +137,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       duration: Duration(milliseconds: 600))
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                  padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
                                   child: Icon(
                                     Icons.edit,
                                     color: kWhiteColor,
@@ -175,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: Icon(Icons.contact_support, color: kWhiteColor,),
                               ),
                               Text(
-                                "General",
+                                "Giới tính",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
@@ -186,15 +186,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                         ),
                         textfield(
-                          hintText: 'History',
+                          hintText: 'Lịch sử',
                           icon: Icons.history,
                         ),
                         textfield(
-                          hintText: 'Support',
+                          hintText: 'Hỗ trợ',
                           icon: Icons.contact_support_outlined,
                         ),
                         textfield(
-                          hintText: 'Logout',
+                          hintText: 'Đăng Xuất',
                           icon: Icons.logout,
                           onTap: () => {
                             Get.offAll(() => LoginScreen(),

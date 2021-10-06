@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:it_support/constant.dart';
 
-//màn hình của user đưa thông tin của IT support List
+//màn hình của IT đưa thông tin của Request List
 
-class DetailScreen extends StatelessWidget {
+class DetailRequestsScreen extends StatelessWidget {
   var _name;
   var _description;
   var _imageUrl;
 
-  DetailScreen(this._name, this._description, this._imageUrl);
-
+  DetailRequestsScreen(this._name, this._description, this._imageUrl);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Chi Tiết Yêu Cầu"),
+        backgroundColor: kBlueColor,
+      ),
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,
@@ -91,15 +94,6 @@ class DetailScreen extends StatelessWidget {
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                _description,
-                                style: TextStyle(
-                                  color: kTitleTextColor.withOpacity(0.7),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
                               Row(
                                 children: <Widget>[
                                   Container(
@@ -148,7 +142,7 @@ class DetailScreen extends StatelessWidget {
                         height: 50,
                       ),
                       Text(
-                        'Tổng Quan',
+                        'Vấn Đề Thiết Bị',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -159,7 +153,24 @@ class DetailScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Mark Zuckerberg is an American computer programmer and Internet technology entrepreneur. He is the co-founder of Facebook, and currently runs the company as president and CEO.\nZuckerberg launched Facebook in his dorm room at Harvard University on February 4, 2004. In the process of creating, building and perfecting this social network, he received help from his classmates. and other Harvard students like Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.',
+                        _description,
+                        style: TextStyle(
+                          color: kTitleTextColor.withOpacity(0.7),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        'Thông Tin Khách Hàng',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: kTitleTextColor,
+                        ),
+                      ),
+                      Text(
+                        'Số Điện Thoại: +84 6969696969',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),
@@ -169,12 +180,14 @@ class DetailScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Upcoming Schedules',
+                        'Địa Chỉ: TP Hồ Chí Minh',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: kTitleTextColor,
+                          height: 1.6,
+                          color: kTitleTextColor.withOpacity(0.7),
                         ),
+                      ),
+                      SizedBox(
+                        height: 20,
                       ),
                     ],
                   ),
