@@ -10,7 +10,8 @@ class HomeScreenCustomer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ITSupport"),
+        title: const Text("IT Support"),
+        automaticallyImplyLeading: false,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
