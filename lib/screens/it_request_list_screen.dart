@@ -7,7 +7,7 @@ class RequestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Request List"),
+        title: Text("Danh Sách Yêu Cầu"),
         backgroundColor: kBlueColor,
       ),
       backgroundColor: kBackgroundColor,
@@ -19,7 +19,7 @@ class RequestScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'We have some problem !',
+                  'Chúng tôi có vài vấn đề !',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kTitleTextColor,
