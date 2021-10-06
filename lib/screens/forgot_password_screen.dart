@@ -13,17 +13,17 @@ class ForgotPasswordScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              // Padding(
+              //   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              //   child: Container(
+              //       width: 380,
+              //       height: 300,
+              //       child: Image.asset('assets/images/logo.jpg')),
+              // ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                child: Container(
-                    width: 380,
-                    height: 300,
-                    child: Image.asset('assets/images/logo.jpg')),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
+                padding: const EdgeInsets.fromLTRB(0, 170, 0, 20),
                 child: Text(
-                  "Forgot Password ?",
+                  "Quên Mật Khẩu ?",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -46,7 +46,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   obscureText: true,
                   decoration: InputDecoration(
-                      labelText: "NEW PASSWORD",
+                      labelText: "MẬT KHẨU MỚI",
                       labelStyle:
                           TextStyle(color: Color(0xff888888), fontSize: 15)),
                 ),
@@ -60,7 +60,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 18, color: Colors.black),
                       obscureText: true,
                       decoration: InputDecoration(
-                          labelText: "CONFIRM PASSWORD",
+                          labelText: "XÁC NHẬN MẬT KHẨU",
                           labelStyle: TextStyle(
                               color: Color(0xff888888), fontSize: 15)),
                     ),
@@ -68,7 +68,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 80, 0, 0),
                 child: SizedBox(
                   width: double.infinity,
                   height: 56,
@@ -78,7 +78,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(8))),
                     onPressed: onSignInClicked,
                     child: Text(
-                      "RESET PASSWORD",
+                      "LẤY LẠI MẬT KHẨU",
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
