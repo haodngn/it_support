@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:it_support/screens/bottom_nav_bar_screen.dart';
 import 'package:it_support/screens/components/dropdown_button.dart';
 import 'package:it_support/screens/components/dropdown_button_type.dart';
 import 'package:it_support/screens/components/rounded_input_field.dart';
 import 'package:it_support/screens/it_support_list_screen.dart';
+import 'package:it_support/screens/request_list_screen.dart';
 
 import 'dart:async';
 import 'dart:io';
@@ -101,17 +103,18 @@ class _HomeScreenCustomerState extends State<HomeScreenCustomer> {
     return Scaffold(
         appBar: AppBar(
           title: const Text("ITSupport"),
+          automaticallyImplyLeading: false,
         ),
         body: Column(children: <Widget>[
           complete
               ? Expanded(
                   child: Center(
                       child: AlertDialog(
-                    title: new Text("Request complete"),
-                    content: const Text("choose supporter you want"),
+                    title: new Text("Gửi yêu cầu thành công"),
+                    content: const Text("Chuyển tới danh sách yêu cầu"),
                     actions: <Widget>[
                       new FlatButton(
-                        child: new Text("next"),
+                        child: new Text("Đồng ý"),
                         onPressed: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: backtoListItScreen));
@@ -134,7 +137,7 @@ class _HomeScreenCustomerState extends State<HomeScreenCustomer> {
   }
 
   Widget backtoListItScreen(BuildContext context) {
-    return ListItScreen();
+    return ListRequestScreen();
   }
 }
 
