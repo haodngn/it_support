@@ -13,18 +13,18 @@ class RegisterScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              // Padding(
+              //   padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+              //   child: Container(
+              //       width: 380,
+              //       height: 300,
+              //       // padding: EdgeInsets.all(15),
+              //       // decoration: BoxDecoration(
+              //       //     shape: BoxShape.circle, color: Colors.blue),
+              //       child: Image.asset('assets/images/logo.jpg')),
+              // ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: Container(
-                    width: 380,
-                    height: 300,
-                    // padding: EdgeInsets.all(15),
-                    // decoration: BoxDecoration(
-                    //     shape: BoxShape.circle, color: Colors.blue),
-                    child: Image.asset('assets/images/logo.jpg')),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+                padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
                 child: Text(
                   "Hello,\nWelcome !",
                   style: TextStyle(
@@ -34,7 +34,7 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 28),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
                 child: TextField(
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
@@ -44,7 +44,7 @@ class RegisterScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 28),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
                 child: TextField(
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
@@ -81,7 +81,7 @@ class RegisterScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+                padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
                 child: SizedBox(
                   width: double.infinity,
                   height: 56,
