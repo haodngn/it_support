@@ -7,7 +7,7 @@ class ListRequestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Request List"),
+        title: Text("Danh Sách Yêu Cầu"),
         backgroundColor: kBlueColor,
       ),
       backgroundColor: kBackgroundColor,
@@ -35,8 +35,8 @@ class ListRequestScreen extends StatelessWidget {
       child: Column(
         children: <Widget>[
           DetailCard(
-            'Nguyen Van A',
-            'Device: Laptop Asus',            
+            'Nguyễn Văn A',
+            'Thiết bị : Laptop Asus',            
             'assets/images/Yeti.png',
             kBlueColor,
           ),
@@ -44,8 +44,8 @@ class ListRequestScreen extends StatelessWidget {
             height: 20,
           ),
           DetailCard(
-            'Nguyen Van B',
-            'Device: Iphone 13 pro max',
+            'Nguyễn Văn B',
+            'Thiết bị : Iphone 13 pro max',
             'assets/images/Yeti.png',
             kYellowColor,
           ),
@@ -53,8 +53,8 @@ class ListRequestScreen extends StatelessWidget {
             height: 20,
           ),
           DetailCard(
-            'Nguyen Van C',
-            'Device: PC',
+            'Nguyễn Văn C',
+            'Thiết bị : PC',
             'assets/images/Yeti.png',
             kOrangeColor,
           ),

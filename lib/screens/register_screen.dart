@@ -26,7 +26,7 @@ class RegisterScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 80, 0, 40),
                 child: Text(
-                  "Hello,\nWelcome !",
+                  "Xin Chào,\nChào Mừng !",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -38,7 +38,7 @@ class RegisterScreen extends StatelessWidget {
                 child: TextField(
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   decoration: InputDecoration(
-                      labelText: "USERNAME",
+                      labelText: "TÊN ĐĂNG NHẬP",
                       labelStyle:
                           TextStyle(color: Color(0xff888888), fontSize: 15)),
                 ),
@@ -59,7 +59,7 @@ class RegisterScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                   obscureText: true,
                   decoration: InputDecoration(
-                      labelText: "PASSWORD",
+                      labelText: "MẬT KHẨU",
                       labelStyle:
                           TextStyle(color: Color(0xff888888), fontSize: 15)),
                 ),
@@ -73,7 +73,7 @@ class RegisterScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 18, color: Colors.black),
                       obscureText: true,
                       decoration: InputDecoration(
-                          labelText: "CONFIRM PASSWORD",
+                          labelText: "XÁC NHẬN MẬT KHẨU",
                           labelStyle: TextStyle(
                               color: Color(0xff888888), fontSize: 15)),
                     ),
@@ -91,7 +91,7 @@ class RegisterScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(8))),
                     onPressed: onSignInClicked,
                     child: Text(
-                      "SIGN UP",
+                      "ĐĂNG KÝ",
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
