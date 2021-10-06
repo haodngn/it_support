@@ -10,11 +10,7 @@ class ListChatScreen extends StatelessWidget {
       appBar: AppBar(
         brightness: Brightness.dark,
         elevation: 8,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          color: Colors.white,
-          onPressed: () {},
-        ),
+        automaticallyImplyLeading: false,
         title: Text(
           'Tin Nhắn',
           style: TextStyle(
