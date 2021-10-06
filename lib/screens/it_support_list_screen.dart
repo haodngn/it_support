@@ -8,6 +8,7 @@ class ListItScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Danh Sách IT Hỗ Trợ"),
+        automaticallyImplyLeading: false,
         backgroundColor: kBlueColor,
       ),
       backgroundColor: kBackgroundColor,
