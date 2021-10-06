@@ -18,8 +18,6 @@ class HomeScreenCustomer extends StatelessWidget {
           child: Body(value: value),
         ),
       ),
-      bottomNavigationBar: const BottomNavBar(),
-      // bottomNavigationBar: BottomNavBar(),
     );
   }
 }
