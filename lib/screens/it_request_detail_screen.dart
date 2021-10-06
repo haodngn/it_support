@@ -14,7 +14,7 @@ class DetailRequestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Request Detail"),
+        title: Text("Chi Tiết Yêu Cầu"),
         backgroundColor: kBlueColor,
       ),
       body: SingleChildScrollView(
@@ -142,7 +142,7 @@ class DetailRequestScreen extends StatelessWidget {
                         height: 50,
                       ),
                       Text(
-                        'About This Problem',
+                        'Thông tin vấn đề',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -162,7 +162,7 @@ class DetailRequestScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Customer Information',
+                        'Thông tin khách hàng',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -180,7 +180,7 @@ class DetailRequestScreen extends StatelessWidget {
                         height: 20,
                       ),
                       Text(
-                        'Address: 69, Future Street, Moon City, Solar System',
+                        'Địa chỉ: 69, đường tương lai, thành phố mặt trăng, hệ mặt trời',
                         style: TextStyle(
                           height: 1.6,
                           color: kTitleTextColor.withOpacity(0.7),

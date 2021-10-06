@@ -7,7 +7,7 @@ class ListItScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("IT Support List"),
+        title: Text("Danh Sách IT Hỗ Trợ"),
         backgroundColor: kBlueColor,
       ),
       backgroundColor: kBackgroundColor,
@@ -19,7 +19,7 @@ class ListItScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Hi, How We Can Help You?',
+                  'Chào, Chúng tôi có thể giúp gì cho bạn?',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kTitleTextColor,

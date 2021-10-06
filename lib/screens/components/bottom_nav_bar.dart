@@ -37,19 +37,19 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",
+            label: "Trang chủ",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.format_list_bulleted),
-            label: "List ITSupport",
+            label: "Danh sách IT",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.message),
-            label: "Chat",
+            label: "Trò truyện",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: "Profile",
+            label: "Hồ Sơ",
           ),
         ],
       ),

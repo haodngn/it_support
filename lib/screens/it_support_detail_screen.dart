@@ -148,7 +148,7 @@ class DetailScreen extends StatelessWidget {
                         height: 50,
                       ),
                       Text(
-                        'About IT Support',
+                        'Tổng Quan',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
