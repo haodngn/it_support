@@ -1,143 +1,300 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:it_support/screens/bottom_nav_bar_screen.dart';
-import 'package:it_support/screens/components/dropdown_button.dart';
-import 'package:it_support/screens/components/dropdown_button_type.dart';
-import 'package:it_support/screens/components/rounded_input_field.dart';
-import 'package:it_support/screens/it_support_list_screen.dart';
-import 'package:it_support/screens/request_list_screen.dart';
+import 'package:get/get.dart';
+import 'package:it_support/constant.dart';
+import 'package:it_support/screens/edit_profile_screen.dart';
 
-import 'dart:async';
-import 'dart:io';
-import 'dart:ui';
 
-import 'components/load_image.dart';
-
-class HomeScreenCustomer extends StatefulWidget {
-  const HomeScreenCustomer({Key? key}) : super(key: key);
-
-  @override
-  _HomeScreenCustomerState createState() => new _HomeScreenCustomerState();
-}
-
-class _HomeScreenCustomerState extends State<HomeScreenCustomer> {
-  int currentStep = 0;
-  bool complete = false;
-  StepperType stepperType = StepperType.horizontal;
-  StepState stepState = StepState.editing;
-
-  next() {
-    currentStep + 1 != steps.length
-        ? goTo(currentStep + 1)
-        : setState(() => complete = true);
-  }
-
-  goTo(int step) {
-    setState(() => currentStep = step);
-  }
-
-  cancel() {
-    if (currentStep > 0) {
-      goTo(currentStep - 1);
-    }
-  }
-
-  swtichStepType() {
-    setState(() => stepperType == StepperType.horizontal
-        ? stepperType = StepperType.horizontal
-        : stepperType = StepperType.vertical);
-  }
-
-  List<Step> steps = [
-    Step(
-      title: const Text("Thiết bị"),
-      isActive: true,
-      state: StepState.editing,
-      content: Column(
-        children: const <Widget>[
-          Text(
-            "Chọn thiết bị của bạn: ",
-            textAlign: TextAlign.left,
-          ),
-          RoundedDropdownButton(),
-        ],
-      ),
-    ),
-    Step(
-      title: const Text("Loại thiết bị"),
-      isActive: true,
-      state: StepState.editing,
-      content: Column(
-        children: const <Widget>[
-          Text(
-            "Loại thiết bị: ",
-            textAlign: TextAlign.left,
-          ),
-          DropdownButtonType(),
-        ],
-      ),
-    ),
-    Step(
-      title: const Text("Vấn đề"),
-      isActive: true,
-      state: StepState.editing,
-      content: Column(
-        children: <Widget>[
-          RoundedInputField(
-              hintText: "Vấn đề của bạn là gì ?", onChanged: (value) {}),
-        ],
-      ),
-    ),
-    Step(
-      title: const Text("Ảnh/Video"),
-      isActive: true,
-      state: StepState.editing,
-      content: Column(
-        children: <Widget>[Text("Thêm ảnh hoặc video minh họa"), LoadImage()],
-      ),
-    ),
-  ];
-
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("ITSupport"),
-          automaticallyImplyLeading: false,
-        ),
-        body: Column(children: <Widget>[
-          complete
-              ? Expanded(
-                  child: Center(
-                      child: AlertDialog(
-                    title: new Text("Gửi yêu cầu thành công"),
-                    content: const Text("Chuyển tới danh sách yêu cầu"),
-                    actions: <Widget>[
-                      new FlatButton(
-                        child: new Text("Đồng ý"),
-                        onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: backtoListItScreen));
-                        },
-                      ),
-                    ],
-                  )),
-                )
-              : Expanded(
-                  child: Stepper(
-                    steps: steps,
-                    // type: stepperType,
-                    currentStep: currentStep,
-                    onStepContinue: next,
-                    onStepCancel: cancel,
-                    onStepTapped: (step) => goTo(step),
+      backgroundColor: kBackgroundColor,
+      body: SafeArea(
+        bottom: false,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 70,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Hello,\nHao Dinh Nguyen',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: kTitleTextColor,
                   ),
                 ),
-        ]));
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: Container(
+                    width: 380,
+                    height: 300,
+                    child: Image.asset('assets/images/logo.jpg')),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Thể loại',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: kTitleTextColor,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              buildCategoryList(),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: Text(
+                  'Top Doctors',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: kTitleTextColor,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              // buildDoctorList(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
-  Widget backtoListItScreen(BuildContext context) {
-    return ListRequestScreen();
+  buildCategoryList() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: <Widget>[
+          SizedBox(
+            width: 30,
+          ),
+          // ĐIỆN THOẠI IOS
+          InkWell(
+            onTap: () => {
+              Get.to(() => EditProfile(),
+                  transition:
+                  Transition.rightToLeftWithFade,
+                  duration: Duration(milliseconds: 600))
+            },
+            child: Stack(
+              children: <Widget>[
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Container(
+                    width: 110,
+                    height: 137,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 16,
+                    ),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        'Điện thoại\n     iOS',
+                        style: TextStyle(
+                          color: kTitleTextColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 17,
+                  child: Container(
+                    height: 84,
+                    width: 84,
+                    decoration: BoxDecoration(
+                      color: kBlueColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/icons/iosicon.jpg',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          //ĐIỆN THOẠI ANDROID
+          InkWell(
+            onTap: () => {
+              Get.to(() => EditProfile(),
+                  transition:
+                  Transition.rightToLeftWithFade,
+                  duration: Duration(milliseconds: 600))
+            },
+            child: Stack(
+              children: <Widget>[
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Container(
+                    width: 110,
+                    height: 137,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 16,
+                    ),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        'Điện thoại\nAndroid',
+                        style: TextStyle(
+                          color: kTitleTextColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 17,
+                  child: Container(
+                    height: 84,
+                    width: 84,
+                    decoration: BoxDecoration(
+                      color: kBlueColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/icons/androidicon.png',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          //MÁY TÍNH MACOS
+          InkWell(
+            onTap: () => {
+              Get.to(() => EditProfile(),
+                  transition:
+                  Transition.rightToLeftWithFade,
+                  duration: Duration(milliseconds: 600))
+            },
+            child: Stack(
+              children: <Widget>[
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Container(
+                    width: 110,
+                    height: 137,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 16,
+                    ),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        'Máy tính\nmacOS',
+                        style: TextStyle(
+                          color: kTitleTextColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 17,
+                  child: Container(
+                    height: 84,
+                    width: 84,
+                    decoration: BoxDecoration(
+                      color: kBlueColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/icons/macoslogo.png',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          //MÁY TÍNH WINDOW
+          InkWell(
+            onTap: () => {
+              Get.to(() => EditProfile(),
+                  transition:
+                  Transition.rightToLeftWithFade,
+                  duration: Duration(milliseconds: 600))
+            },
+            child: Stack(
+              children: <Widget>[
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Container(
+                    width: 110,
+                    height: 137,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 16,
+                    ),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        'Máy tính\nWindows',
+                        style: TextStyle(
+                          color: kTitleTextColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 17,
+                  child: Container(
+                    height: 84,
+                    width: 84,
+                    decoration: BoxDecoration(
+                      color: kBlueColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Image.asset(
+                      'assets/icons/windownicon.png',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+        ],
+      ),
+    );
   }
 }
-

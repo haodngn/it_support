@@ -22,9 +22,6 @@ class LoginScreen extends StatelessWidget {
                 child: Container(
                     width: 380,
                     height: 300,
-                    // padding: EdgeInsets.all(15),
-                    // decoration: BoxDecoration(
-                    //     shape: BoxShape.circle, color: Colors.blue),
                     child: Image.asset('assets/images/logo.jpg')),
               ),
               Padding(
