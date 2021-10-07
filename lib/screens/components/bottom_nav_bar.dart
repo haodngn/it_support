@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
 
   final screens = [
-    HomeScreenCustomer(),
+    HomeScreen(),
     ListItScreen(),
     ListChatScreen(),
     ProfileScreen(),
