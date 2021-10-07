@@ -70,7 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       Text(
-                        "Nguyen Van A",
+                        "Nguyen Văn A",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -175,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 child: Icon(Icons.contact_support, color: kWhiteColor,),
                               ),
                               Text(
-                                "Giới tính",
+                                "Cài đặt",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,

@@ -120,7 +120,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: Text(
                           "Tên:",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 15,
                           ),
                         ),
                       ),
@@ -129,7 +129,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: TextField(
                           controller: textFirstNameController,
                           decoration: InputDecoration(
-                            hintText: "Nguyen Van A",
+                            hintText: "Nguyen Văn A",
                             border: OutlineInputBorder(),
                           ),
                           keyboardType: TextInputType.name,
@@ -145,7 +145,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: Text(
                           "Giới tính:",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 15,
                           ),
                         ),
                       ),
@@ -197,7 +197,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: Text(
                           "Ngày sinh:",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 15,
                           ),
                         ),
                       ),
@@ -231,7 +231,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: Text(
                           "Di Động:",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 15,
                           ),
                         ),
                       ),
@@ -256,7 +256,7 @@ class _EditProfileState extends State<EditProfile> {
                         child: Text(
                           "Email:",
                           style: TextStyle(
-                            fontSize: 22,
+                            fontSize: 15,
                           ),
                         ),
                       ),

@@ -63,7 +63,7 @@ class ListRequestScreen extends StatelessWidget {
         children: <Widget>[
           DetailCard(
             'Nguyễn Văn A',
-            'Thiết bị : Laptop Asus',            
+            'Thiết bị : Laptop Asus\nTrạng thái: Đang xử lý',
             'assets/images/Yeti.png',
             kBlueColor,
           ),
@@ -72,18 +72,18 @@ class ListRequestScreen extends StatelessWidget {
           ),
           DetailCard(
             'Nguyễn Văn A',
-            'Thiết bị : Iphone 13 pro max',
+            'Thiết bị : Iphone 13 pro max\nTrạng thái: Hoàn Thành',
             'assets/images/Yeti.png',
-            kYellowColor,
+            kBlueColor,
           ),
           SizedBox(
             height: 20,
           ),
           DetailCard(
             'Nguyễn Văn A',
-            'Thiết bị : PC',
+            'Thiết bị : PC\nTrạng thái: Hoàn Thành',
             'assets/images/Yeti.png',
-            kOrangeColor,
+            kBlueColor,
           ),
           SizedBox(
             height: 20,

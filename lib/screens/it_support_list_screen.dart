@@ -47,25 +47,25 @@ class ListItScreen extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ITCard(
-            'Nguyen Van A',
+            'Nguyen A',
             'Software Engineer\nFPT Software',
             'assets/images/Yeti.png',
-            kBlueColor,
+            kOrangeColor,
           ),
           SizedBox(
             height: 20,
           ),
           ITCard(
-            'Nguyen Van B',
+            'Nguyen B',
             'AI Engineer\nFPT Software',
             'assets/images/Yeti.png',
-            kYellowColor,
+            kOrangeColor,
           ),
           SizedBox(
             height: 20,
           ),
           ITCard(
-            'Nguyen Van C',
+            'Nguyen C',
             'Tester\nFPT Software',
             'assets/images/Yeti.png',
             kOrangeColor,

@@ -40,7 +40,7 @@ class DropdownButtonTypeState extends State<DropdownButtonType> {
               dropdownValue = newValue!;
             });
           },
-          items: <String>['MSI', 'HP', 'Dell', 'Lenovo', 'Acer']
+          items: <String>['MSI', 'HP', 'Dell', 'Lenovo', 'Acer','Asus']
               .map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
