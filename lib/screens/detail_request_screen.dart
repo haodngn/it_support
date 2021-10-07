@@ -94,46 +94,6 @@ class DetailRequestsScreen extends StatelessWidget {
                               SizedBox(
                                 height: 10,
                               ),
-                              // Row(
-                              //   children: <Widget>[
-                              //     Container(
-                              //       padding: EdgeInsets.all(10),
-                              //       decoration: BoxDecoration(
-                              //         color: kBlueColor.withOpacity(0.1),
-                              //         borderRadius: BorderRadius.circular(10),
-                              //       ),
-                              //       child: SvgPicture.asset(
-                              //         'assets/icons/phone.svg',
-                              //       ),
-                              //     ),
-                              //     SizedBox(
-                              //       width: 16,
-                              //     ),
-                              //     Container(
-                              //       padding: EdgeInsets.all(10),
-                              //       decoration: BoxDecoration(
-                              //         color: kYellowColor.withOpacity(0.1),
-                              //         borderRadius: BorderRadius.circular(10),
-                              //       ),
-                              //       child: SvgPicture.asset(
-                              //         'assets/icons/chat.svg',
-                              //       ),
-                              //     ),
-                              //     SizedBox(
-                              //       width: 16,
-                              //     ),
-                              //     Container(
-                              //       padding: EdgeInsets.all(10),
-                              //       decoration: BoxDecoration(
-                              //         color: kOrangeColor.withOpacity(0.1),
-                              //         borderRadius: BorderRadius.circular(10),
-                              //       ),
-                              //       child: SvgPicture.asset(
-                              //         'assets/icons/video.svg',
-                              //       ),
-                              //     ),
-                              //   ],
-                              // ),
                             ],
                           )
                         ],
@@ -151,6 +111,13 @@ class DetailRequestsScreen extends StatelessWidget {
                       ),
                       SizedBox(
                         height: 10,
+                      ),
+                      Text(
+                        'Vấn đề gặp phải: Khong khoi dong may duoc.',
+                        style: TextStyle(
+                          height: 1.6,
+                          color: kTitleTextColor.withOpacity(0.7),
+                        ),
                       ),
                       Text(
                         _description,
