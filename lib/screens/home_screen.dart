@@ -4,6 +4,8 @@ import 'package:it_support/constant.dart';
 import 'package:it_support/screens/edit_profile_screen.dart';
 import 'package:it_support/screens/sub_category_screen/ios_category_screen.dart';
 import 'package:it_support/screens/sub_category_screen/android_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/macOS_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/windows_category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -191,7 +193,7 @@ class HomeScreen extends StatelessWidget {
           //MÁY TÍNH MACOS
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
+              Get.to(() => MacOSCategory(),
                   transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
@@ -242,7 +244,7 @@ class HomeScreen extends StatelessWidget {
           //MÁY TÍNH WINDOW
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
+              Get.to(() => WindowsCategory(),
                   transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
