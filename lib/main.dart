@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:it_support/screens/login_screen.dart';
+import 'package:it_support/screens/authen_screen/login_screen.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/request_list_screen.dart';
+import 'package:it_support/screens/request_screen/request_list_screen.dart';
 
 void main() {
   runApp(MyApp());
