@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:it_support/screens/bottom_nav_bar_screen.dart';
-import 'package:it_support/screens/forgot_password_screen.dart';
+import 'package:it_support/screens/authen_screen/forgot_password_screen.dart';
 import 'package:it_support/screens/home_screen.dart';
-import 'package:it_support/screens/register_screen.dart';
+import 'package:it_support/screens/authen_screen/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
