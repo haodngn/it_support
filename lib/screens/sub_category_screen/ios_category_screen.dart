@@ -35,7 +35,7 @@ Body(size) {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 50),
+            SizedBox(height: 110),
             Material(
               clipBehavior: Clip.hardEdge,
               borderRadius: BorderRadius.circular(29),

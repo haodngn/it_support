@@ -18,103 +18,62 @@ class _AndroidCategoryState extends State<AndroidCategory> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Padding(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 20),
-              _firstWidget(),
-              SizedBox(height: 20),
-              _secondWidget(),
-            ],
-          )),
+      body: Body(size),
     );
   }
 }
 
-Widget _firstWidget() {
-  return InkWell(
-      onTap: () {},
-      child: Card(
-        shape: BeveledRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
-        ),
-        elevation: 2,
-        child: Row(
+Body(size) {
+  return Container(
+    width: double.infinity,
+    height: size.height,
+    child: Stack(
+      alignment: Alignment.center,
+      children: <Widget>[
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Expanded(
-                flex: 1,
-                child: Container(
-                  height: 55,
-                  width: 30,
-                  decoration: myBoxDecoration(),
-                  child: Icon(
-                    Icons.settings,
-                    color: Colors.white,
+            SizedBox(height: 110),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/cellphone.jpg'),
+                    fit: BoxFit.cover,
+                    height: 200,
+                    width: 300,
+                    child: InkWell(onTap: () {}),
                   ),
-                )),
-            Expanded(
-              flex: 3,
-              child: Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Text(
-                  'Samsung',
-                  style: TextStyle(
-                    fontSize: 25,
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/tablet.jpg'),
+                    fit: BoxFit.cover,
+                    height: 200,
+                    width: 300,
+                    child: InkWell(onTap: () {}),
                   ),
-                ),
+                ],
               ),
             ),
           ],
-        ),
-      ));
-}
-
-Widget _secondWidget() {
-  return InkWell(
-      onTap: () {},
-      child: Card(
-        shape: BeveledRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
-        ),
-        elevation: 2,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Expanded(
-                flex: 1,
-                child: Container(
-                  decoration: myBoxDecoration(),
-                  height: 55,
-                  width: 30,
-                  child: Icon(
-                    Icons.settings,
-                    color: Colors.white,
-                  ),
-                )),
-            Expanded(
-              flex: 3,
-              child: Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Text(
-                  'Oppo',
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ));
-}
-
-BoxDecoration myBoxDecoration() {
-  return BoxDecoration(
-    color: Colors.deepPurple,
-    borderRadius:
-        BorderRadius.all(Radius.circular(5.0) //         <--- border radius here
-            ),
+        )
+      ],
+    ),
   );
 }
