@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:it_support/constant.dart';
 import 'package:it_support/screens/edit_profile_screen.dart';
-
+import 'package:it_support/screens/sub_category_screen/ios_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/android_category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -88,9 +89,8 @@ class HomeScreen extends StatelessWidget {
           // ĐIỆN THOẠI IOS
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => iOSCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -140,9 +140,8 @@ class HomeScreen extends StatelessWidget {
           //ĐIỆN THOẠI ANDROID
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => AndroidCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -193,8 +192,7 @@ class HomeScreen extends StatelessWidget {
           InkWell(
             onTap: () => {
               Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -245,8 +243,7 @@ class HomeScreen extends StatelessWidget {
           InkWell(
             onTap: () => {
               Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
