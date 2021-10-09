@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:it_support/constant.dart';
-import 'package:it_support/screens/edit_profile_screen.dart';
-import 'package:it_support/screens/login_screen.dart';
+import 'package:it_support/screens/profile_screen/edit_profile_screen.dart';
+import 'package:it_support/screens/authen_screen/login_screen.dart';
 
 
 class ProfileScreen extends StatefulWidget {
@@ -55,6 +55,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      SizedBox(
+                        height: 70,
+                      ),
                       Container(
                         padding: EdgeInsets.all(10.0),
                         width: MediaQuery.of(context).size.width / 2,
@@ -65,12 +68,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           color: kBackgroundColor,
                           image: DecorationImage(
                             image:
-                            AssetImage('assets/images/Yeti.png'),
+                            AssetImage('assets/images/profile3.jpg'),
                           ),
                         ),
                       ),
                       Text(
-                        "Nguyen Văn A",
+                        "Nguyen Đình Hào",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
