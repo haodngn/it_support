@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:it_support/constant.dart';
 import 'package:it_support/screens/profile_screen/edit_profile_screen.dart';
+import 'package:it_support/screens/sub_category_screen/ios_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/android_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/macOS_category_screen.dart';
+import 'package:it_support/screens/sub_category_screen/windows_category_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -102,9 +106,8 @@ class HomeScreen extends StatelessWidget {
           // ĐIỆN THOẠI IOS
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => iOSCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -154,9 +157,8 @@ class HomeScreen extends StatelessWidget {
           //ĐIỆN THOẠI ANDROID
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => AndroidCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -206,9 +208,8 @@ class HomeScreen extends StatelessWidget {
           //MÁY TÍNH MACOS
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => MacOSCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
@@ -258,9 +259,8 @@ class HomeScreen extends StatelessWidget {
           //MÁY TÍNH WINDOW
           InkWell(
             onTap: () => {
-              Get.to(() => EditProfile(),
-                  transition:
-                  Transition.rightToLeftWithFade,
+              Get.to(() => WindowsCategory(),
+                  transition: Transition.rightToLeftWithFade,
                   duration: Duration(milliseconds: 600))
             },
             child: Stack(
