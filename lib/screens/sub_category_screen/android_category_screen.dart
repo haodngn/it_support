@@ -14,7 +14,7 @@ class _AndroidCategoryState extends State<AndroidCategory> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Hãy Chọn thiết bị của bạn",
+          "Hãy Chọn loại thiết bị",
           style: TextStyle(color: Colors.white),
         ),
       ),

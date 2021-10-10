@@ -14,7 +14,7 @@ class _WindowsCategoryState extends State<WindowsCategory> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Hãy Chọn thiết bị của bạn",
+          "Hãy Chọn loại thiết bị",
           style: TextStyle(color: Colors.white),
         ),
       ),
