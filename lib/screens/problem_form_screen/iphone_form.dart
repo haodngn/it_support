@@ -35,21 +35,77 @@ class Body extends StatefulWidget {
 
 // Create a corresponding State class, which holds data related to the form.
 class MyCustomFormState extends State<Body> {
-  // Create a global key that uniquely identifies the Form widget
-  // and allows validation of the form.
-  final _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
+    return SafeArea(
       child: SingleChildScrollView(
         // physics: ClampingScrollPhysics(),
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: <Widget>[
-            DropdownControl(),
-            CheckboxWidget(),
+            const DropdownControl(),
+            SizedBox(height: 40),
+            CustomContainer(
+              labelText: 'Vấn đề của bạn',
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(7),
+                ),
+                border: Border.all(color: Colors.black, width: 1),
+              ),
+              child: Column(
+                children: <Widget>[
+                  CheckboxFormField(
+                    title: Text("Không kết nối Internet"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("không khởi động"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("Camera không hoạt động"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("Nút chức năng Home không hoạt động"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("iPhone 3G/3GS gặp nhiều vấn đề với iOS 4:"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  RoundedInputField(
+                      hintText: "Những vấn đề khác...", onChanged: (value) {}),
+                ],
+              ),
+            ),
+            SizedBox(height: 40),
+            CustomContainerImage(
+              labelText: 'Thêm ảnh minh họa ',
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(7),
+                ),
+                border: Border.all(color: Colors.black, width: 1),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: LoadImage(),
+              ),
+            ),
+            SizedBox(height: 30),
+            ElevatedButton(
+              onPressed: () {
+                // Respond to button press
+              },
+              child: Text('Gửi yêu cầu'),
+            ),
           ],
         ),
       ),
@@ -116,63 +172,82 @@ class _DropdownControlState extends State<DropdownControl> {
   }
 }
 
-class CheckboxWidget extends StatefulWidget {
-  @override
-  CheckboxWidgetState createState() => new CheckboxWidgetState();
+class CheckboxFormField extends FormField<bool> {
+  CheckboxFormField(
+      {required Widget title,
+      required FormFieldSetter<bool> onSaved,
+      required FormFieldValidator<bool> validator,
+      bool initialValue = false,
+      bool autovalidate = false})
+      : super(
+            onSaved: onSaved,
+            validator: validator,
+            initialValue: initialValue,
+            builder: (FormFieldState<bool> state) {
+              return CheckboxListTile(
+                dense: state.hasError,
+                title: title,
+                value: state.value,
+                onChanged: state.didChange,
+                controlAffinity: ListTileControlAffinity.leading,
+              );
+            });
 }
 
-class CheckboxWidgetState extends State {
-  Map<String, bool> values = {
-    'Apple': false,
-    'Banana': false,
-    'Cherry': false,
-    'Mango': false,
-    'Orange': false,
-  };
+class CustomContainer extends StatelessWidget {
+  final String labelText;
+  final BoxDecoration decoration;
+  final Widget child;
 
-  var tmpArray = [];
-
-  getCheckboxItems() {
-    values.forEach((key, value) {
-      if (value == true) {
-        tmpArray.add(key);
-      }
-    });
-
-    // Printing all selected items on Terminal screen.
-    print(tmpArray);
-    // Here you will get all your selected Checkbox items.
-
-    // Clear array after use.
-    tmpArray.clear();
-  }
-
+  const CustomContainer(
+      {required this.labelText, required this.decoration, required this.child});
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
-      Text(
-        " Get Selected Checkbox Items ",
-        style: TextStyle(fontSize: 18),
-      ),
-      Expanded(
-        child: ListView(
-          shrinkWrap: true,
-          children: values.keys.map((String key) {
-            // ignore: unnecessary_new
-            return new CheckboxListTile(
-              title: new Text(key),
-              value: values[key],
-              activeColor: Colors.pink,
-              checkColor: Colors.white,
-              onChanged: (bool? value) {
-                setState(() {
-                  values[key] = value!;
-                });
-              },
-            );
-          }).toList(),
+    return Stack(
+      children: <Widget>[
+        Container(
+          height: 80,
         ),
-      ),
-    ]);
+        Positioned(
+          bottom: 0,
+          child: Container(width: 345, height: 356, decoration: decoration),
+        ),
+        Positioned(
+          left: 8,
+          bottom: 348,
+          child: Container(color: Colors.white, child: Text(labelText)),
+        ),
+        child
+      ],
+    );
+  }
+}
+
+class CustomContainerImage extends StatelessWidget {
+  final String labelText;
+  final BoxDecoration decoration;
+  final Widget child;
+
+  const CustomContainerImage(
+      {required this.labelText, required this.decoration, required this.child});
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Container(
+          height: 200,
+        ),
+        Positioned(
+          bottom: 0,
+          child: Container(width: 345, height: 190, decoration: decoration),
+        ),
+        Positioned(
+          left: 8,
+          bottom: 185,
+          child: Container(color: Colors.white, child: Text(labelText)),
+        ),
+        child
+      ],
+    );
   }
 }

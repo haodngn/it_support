@@ -31,8 +31,8 @@ class _LoadImageState extends State<LoadImage> {
           Container(
               child: imageFile != null
                   ? Container(
-                      height: 200,
-                      width: 200,
+                      height: 100,
+                      width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: FileImage(imageFile!),
@@ -40,8 +40,8 @@ class _LoadImageState extends State<LoadImage> {
                       ),
                     )
                   : Container(
-                      height: 200,
-                      width: 200,
+                      height: 100,
+                      width: 100,
                       decoration: BoxDecoration(
                         color: Colors.grey,
                       ),
