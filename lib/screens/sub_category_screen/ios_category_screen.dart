@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:it_support/screens/problem_form_screen/ipad_form.dart';
 import 'package:it_support/screens/problem_form_screen/iphone_form.dart';
 import 'package:get/get.dart';
 
@@ -74,7 +75,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const IpadForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),

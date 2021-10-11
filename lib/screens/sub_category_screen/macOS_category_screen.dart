@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:it_support/screens/problem_form_screen/iPad_form.dart';
+import 'package:it_support/screens/problem_form_screen/imac_form.dart';
+import 'package:it_support/screens/problem_form_screen/macbook_form.dart';
 
 class MacOSCategory extends StatefulWidget {
   const MacOSCategory({Key? key}) : super(key: key);
@@ -48,7 +52,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const MacBookForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),
@@ -66,7 +76,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const ImacForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),
