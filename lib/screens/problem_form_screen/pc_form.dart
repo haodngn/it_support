@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:it_support/screens/bottom_nav_bar_screen.dart';
-import 'package:it_support/screens/components/dropdown_button.dart';
 import 'package:it_support/screens/components/rounded_input_field.dart';
 
 import 'dart:ui';
 
-import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
 class PcForm extends StatelessWidget {
   const PcForm({Key? key}) : super(key: key);
@@ -124,9 +122,10 @@ class MyCustomFormState extends State<Body> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Respond to button press
+                Navigator.push(
+                    context, MaterialPageRoute(builder: continueToRequestTool));
               },
-              child: Text('Gửi yêu cầu'),
+              child: Text('Tiếp theo'),
             ),
           ],
         ),
@@ -296,4 +295,8 @@ class CustomContainerTextField extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget continueToRequestTool(BuildContext context) {
+  return RequestTool();
 }
