@@ -7,6 +7,7 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
 class IphoneForm extends StatelessWidget {
   const IphoneForm({Key? key}) : super(key: key);
@@ -102,9 +103,10 @@ class MyCustomFormState extends State<Body> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Respond to button press
+                Navigator.push(
+                    context, MaterialPageRoute(builder: continueToRequestTool));
               },
-              child: Text('Gửi yêu cầu'),
+              child: Text('Tiếp theo'),
             ),
           ],
         ),
@@ -250,4 +252,8 @@ class CustomContainerImage extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget continueToRequestTool(BuildContext context) {
+  return RequestTool();
 }
