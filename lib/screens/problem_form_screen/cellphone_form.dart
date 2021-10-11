@@ -7,6 +7,7 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
 import 'package:it_support/screens/customercontrol/loadscreen.dart';
 
 class CellphoneForm extends StatelessWidget {
@@ -105,8 +106,7 @@ class MyCustomFormState extends State<Body> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                            MaterialPageRoute(builder: gotoloadscreen));
+                
               },
               child: Text('Gửi yêu cầu'),
             ),
@@ -114,9 +114,6 @@ class MyCustomFormState extends State<Body> {
         ),
       ),
     );
-  }
-  Widget gotoloadscreen(BuildContext context) {
-    return loadscreen();
   }
 }
 
