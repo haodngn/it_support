@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:it_support/screens/problem_form_screen/ipad_form.dart';
+import 'package:it_support/screens/problem_form_screen/iphone_form.dart';
+import 'package:get/get.dart';
 
 class iOSCategory extends StatefulWidget {
   const iOSCategory({Key? key}) : super(key: key);
@@ -14,7 +17,7 @@ class _iOSCategoryState extends State<iOSCategory> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Hãy Chọn thiết bị của bạn",
+          "Hãy Chọn loại thiết bị",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -48,7 +51,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const IphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),
@@ -66,7 +75,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const IpadForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),

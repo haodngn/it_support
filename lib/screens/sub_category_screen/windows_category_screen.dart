@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:it_support/screens/problem_form_screen/laptop_form.dart';
+import 'package:it_support/screens/problem_form_screen/macbook_form.dart';
+import 'package:it_support/screens/problem_form_screen/pc_form.dart';
 
 class WindowsCategory extends StatefulWidget {
   const WindowsCategory({Key? key}) : super(key: key);
@@ -14,7 +18,7 @@ class _WindowsCategoryState extends State<WindowsCategory> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Hãy Chọn thiết bị của bạn",
+          "Hãy Chọn loại thiết bị",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -48,7 +52,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const LaptopForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),
@@ -66,7 +76,13 @@ Body(size) {
                     fit: BoxFit.cover,
                     height: 200,
                     width: 300,
-                    child: InkWell(onTap: () {}),
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const PcForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
                   ),
                 ],
               ),
