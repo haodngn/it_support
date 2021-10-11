@@ -43,7 +43,28 @@ class MyCustomFormState extends State<Body> {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: <Widget>[
-            // const DropdownControl(),
+            const DropdownControl(),
+            SizedBox(height: 40),
+            TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "RAM",
+              ),
+            ),
+            SizedBox(height: 40),
+            TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "Card màn hình",
+              ),
+            ),
+            SizedBox(height: 40),
+            TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: "Ổ cứng",
+              ),
+            ),
             SizedBox(height: 40),
             CustomContainer(
               labelText: 'Vấn đề của bạn',
@@ -56,23 +77,23 @@ class MyCustomFormState extends State<Body> {
               child: Column(
                 children: <Widget>[
                   CheckboxFormField(
-                    title: Text("Máy bị màn hình xanh"),
-                    onSaved: (bool? newValue) {},
-                    validator: (bool? value) {},
-                  ),
-                  CheckboxFormField(
-                    title: Text("Ứng dụng hay gặp sự cố và bị treo"),
-                    onSaved: (bool? newValue) {},
-                    validator: (bool? value) {},
-                  ),
-                  CheckboxFormField(
-                    title:
-                        Text("Máy không lên nguồn hoặc không khởi động được"),
-                    onSaved: (bool? newValue) {},
-                    validator: (bool? value) {},
-                  ),
-                  CheckboxFormField(
                     title: Text("Windows bị lỗi"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("Lỗi bàn phím (Bad keyboard)"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text("Lỗi ổ cứng"),
+                    onSaved: (bool? newValue) {},
+                    validator: (bool? value) {},
+                  ),
+                  CheckboxFormField(
+                    title: Text(
+                        "Lỗi màn hình xanh với thông báo Dumping RAM rồi tắt ngay"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
@@ -122,7 +143,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'Asus';
+  String dropdownValue = 'Windows 10 Home';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -140,7 +161,7 @@ class _DropdownControlState extends State<DropdownControl> {
       isExpanded: true,
       decoration: InputDecoration(
         border: OutlineInputBorder(),
-        labelText: "Dòng thiết bị",
+        labelText: "Windows cua bạn",
       ),
       value: dropdownValue,
       icon: const Icon(Icons.arrow_downward, color: Colors.lightBlue),
@@ -152,12 +173,12 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'Asus',
-        'Lenovo',
-        'Dell ',
-        'MSI',
-        'HP',
-        'Accer',
+        'Windows 10 Home',
+        'Windows 10 Pro',
+        'Windows 11 ',
+        'Windows 8',
+        'Windows 7',
+        'Windows xp',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
