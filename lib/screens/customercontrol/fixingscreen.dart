@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-class loadscreen extends StatefulWidget {
-  const loadscreen({ Key? key }) : super(key: key);
+class fixingscreen extends StatefulWidget {
+  const fixingscreen({ Key? key }) : super(key: key);
 
   @override
-  _loadscreenState createState() => _loadscreenState();
+  _fixingscreenState createState() => _fixingscreenState();
 }
 
-class _loadscreenState extends State<loadscreen> {
+class _fixingscreenState extends State<fixingscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Tìm người sửa",
+          "Đợi việc sửa chữa hoàn thành",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -21,14 +21,14 @@ class _loadscreenState extends State<loadscreen> {
   }
 }
 
-class Body  extends StatefulWidget {
+class Body extends StatefulWidget {
+  const Body({ Key? key }) : super(key: key);
+
   @override
-  _State createState() {
-    return _State();
-  }
+  _BodyState createState() => _BodyState();
 }
 
-class _State extends State<Body> {
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class _State extends State<Body> {
           height: 300,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(30, 50, 30, 140),
-            child: Text("Đang tìm kiếm người sửa....", style: TextStyle(fontSize: 23),),
+            child: Text("Đang sửa chữa thiết bị....", style: TextStyle(fontSize: 23),),
           ),      
           decoration: BoxDecoration(
             color: Colors.white,            

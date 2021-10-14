@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:it_support/screens/customercontrol/fixingscreen.dart';
 
 class acceptfee extends StatefulWidget {
   const acceptfee({Key? key}) : super(key: key);
@@ -59,26 +60,42 @@ class _State extends State<Body> {
                   ),
                 ),
                 Container(
-                  child: Row(                   
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            //method click
-                          },
-                          child: Text('Đồng Ý'),
+                      ClipRRect(
+                        // borderRadius: BorderRadius.circular(15),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(60, 0, 0, 0),
+                          child: RaisedButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: gotoFixing));
+                            },
+                            child: Text(
+                              'Đồng Ý',
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                            color: Colors.green,
+                          ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
-                        child: ElevatedButton(                          
-                          
-                          onPressed: () {
-                            //method click
-                          },
-                          child: Text('Từ Chối'),
+                      ClipRRect(
+                        // borderRadius: BorderRadius.circular(15),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 60, 0),
+                          child: RaisedButton(
+                            onPressed: () {
+                              //method click
+                            },
+                            child: Text(
+                              'Từ Chối',
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                            color: Colors.red,
+                          ),
                         ),
                       ),
                     ],
@@ -88,5 +105,9 @@ class _State extends State<Body> {
             ),
           ),
         ));
+  }
+
+  Widget gotoFixing(BuildContext context) {
+    return fixingscreen();
   }
 }
