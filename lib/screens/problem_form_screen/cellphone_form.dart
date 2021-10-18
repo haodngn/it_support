@@ -7,6 +7,8 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
+import 'package:it_support/screens/customercontrol/loadscreen.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
 class CellphoneForm extends StatelessWidget {
