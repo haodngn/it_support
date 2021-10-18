@@ -31,15 +31,14 @@ Body(size) {
   return Container(
     width: double.infinity,
     height: size.height,
-    child: Stack(
-      alignment: Alignment.center,
+    child: ListView(
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 110),
+            SizedBox(height: 50),
             Material(
               clipBehavior: Clip.hardEdge,
               borderRadius: BorderRadius.circular(29),
@@ -48,9 +47,9 @@ Body(size) {
                 fit: StackFit.passthrough,
                 children: [
                   Ink.image(
-                    image: const AssetImage('assets/images/cellphone.jpg'),
+                    image: const AssetImage('assets/images/samsung.jpg'),
                     fit: BoxFit.cover,
-                    height: 200,
+                    height: 100,
                     width: 300,
                     child: InkWell(
                       onTap: () => {
@@ -72,13 +71,133 @@ Body(size) {
                 fit: StackFit.passthrough,
                 children: [
                   Ink.image(
-                    image: const AssetImage('assets/images/tablet.jpg'),
+                    image: const AssetImage('assets/images/oppo.jpg'),
                     fit: BoxFit.cover,
-                    height: 200,
+                    height: 100,
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const TabletForm(),
+                        Get.to(() => const CellphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/lg.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const CellphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/xiaome.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const CellphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/vivo.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const CellphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/huawei.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const CellphoneForm(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 50),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/realme.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const CellphoneForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },

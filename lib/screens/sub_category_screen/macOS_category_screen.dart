@@ -31,8 +31,7 @@ Body(size) {
   return Container(
     width: double.infinity,
     height: size.height,
-    child: Stack(
-      alignment: Alignment.center,
+    child: ListView(
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
