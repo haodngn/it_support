@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'Tin tức về công nghệ',
+                  'Các vấn đề phổ biến',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: kTitleTextColor,
@@ -342,7 +342,7 @@ class HomeScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: Text(
-                            'Hướng dẫn cập nhật lên Windows 11- tinhte.vn',
+                            'Hướng dẫn cập nhật lên Windows 11',
                             style: TextStyle(
                               color: kTitleTextColor,
                             ),
@@ -372,15 +372,10 @@ class HomeScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () async {
-                  final url = "https://tinhte.vn/thread/mot-so-cai-dat-ban-dau-de-su-dung-windows-11-tot-hon.3413828/";
+                  final url = "https://www.dienmayxanh.com/kinh-nghiem-hay/huong-dan-cai-dat-windows-7-10-don-gian-nhat-ai-cu-1218882";
                   if(await canLaunch(url)) {
                     await launch(url);
                   }
-                  // openBrowserURL(url: url, inApp: true);
-                  // Get.to(() => EditProfile(),
-                  //     transition:
-                  //     Transition.rightToLeftWithFade,
-                  //     duration: Duration(milliseconds: 600))
                 },
                 child: Stack(
                   children: <Widget>[
@@ -398,7 +393,7 @@ class HomeScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: Text(
-                            'Một số cài đặt ban đầu để sử dụng Windows 11 tốt hơn- tinhte.vn',
+                            'Hướng dẫn cài đặt Windows 10 bảng quyền.',
                             style: TextStyle(
                               color: kTitleTextColor,
                             ),
@@ -428,7 +423,7 @@ class HomeScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () async {
-                  final url = "https://tinhte.vn/thread/huong-dan-cap-nhat-len-windows-11-mien-phi-cach-ep-may-len-windows-11-ngay-hom-nay.3413014/";
+                  final url = "http://maytinhnamthai.com/tin-tuc/10-loi-may-tinh-thuong-gap-va-cach-khac-phuc/";
                   if(await canLaunch(url)) {
                     await launch(url);
                   }
@@ -449,7 +444,7 @@ class HomeScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: Text(
-                            'Đổi từ Laptop Windows sang Macbook, được gì và mất gì?- tinhte.vn',
+                            '10 lỗi máy tính thường gặp và cách khắc phục',
                             style: TextStyle(
                               color: kTitleTextColor,
                             ),
@@ -468,57 +463,6 @@ class HomeScreen extends StatelessWidget {
                         // ),
                         child: Image.asset(
                           'assets/images/new3.jpg',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              InkWell(
-                onTap: () async {
-                  final url = "https://tinhte.vn/thread/huong-dan-cap-nhat-len-windows-11-mien-phi-cach-ep-may-len-windows-11-ngay-hom-nay.3413014/";
-                  if(await canLaunch(url)) {
-                    await launch(url);
-                  }
-                },
-                child: Stack(
-                  children: <Widget>[
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Container(
-                        width: 225,
-                        height: 225,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 16,
-                        ),
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            'Infographic: Vòng đời các bản Windows- tinhte.vn',
-                            style: TextStyle(
-                              color: kTitleTextColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 17,
-                      child: Container(
-                        height: 200,
-                        width: 200,
-                        // decoration: BoxDecoration(
-                        //   color: kBlueColor,
-                        //   borderRadius: BorderRadius.circular(20),
-                        // ),
-                        child: Image.asset(
-                          'assets/images/new4.jpg',
                         ),
                       ),
                     ),
