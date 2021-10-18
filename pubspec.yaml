@@ -67,6 +67,29 @@ flutter:
     - assets/icons/
     - assets/images/
 
+  fonts:
+    - family: CM Sans Serif
+      fonts:
+        - asset: assets/fonts/cm_sans_serif_2012.ttf
+
+#  fonts:
+#    - family: Poppins
+#      fonts:
+#        - asset: assets/fonts/Poppins-Regular.ttf
+#          weight: 500
+#        - asset: assets/fonts/Poppins-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Poppins-Bold.ttf
+#          weight: 700
+#    - family: OpenSans
+#      fonts:
+#        - asset: assets/fonts/OpenSans-Regular.ttf
+#          weight: 500
+#        - asset: assets/fonts/OpenSans-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/OpenSans-Bold.ttf
+#          weight: 700
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
