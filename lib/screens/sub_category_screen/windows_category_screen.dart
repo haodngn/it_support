@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/problem_form_screen/laptop_form.dart';
-import 'package:it_support/screens/problem_form_screen/macbook_form.dart';
-import 'package:it_support/screens/problem_form_screen/pc_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/laptop_form.dart';
+import 'package:it_support/screens/problem_form_screen/macOS/macbook_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/pc_form.dart';
 
 class WindowsCategory extends StatefulWidget {
   const WindowsCategory({Key? key}) : super(key: key);

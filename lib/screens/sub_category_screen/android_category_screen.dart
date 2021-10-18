@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/problem_form_screen/cellphone_form.dart';
-import 'package:it_support/screens/problem_form_screen/iPad_form.dart';
-import 'package:it_support/screens/problem_form_screen/tablet_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/cellphone_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/lg_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/oppo_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/samsung_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/xiaome_form.dart';
 
 class AndroidCategory extends StatefulWidget {
   const AndroidCategory({Key? key}) : super(key: key);
@@ -53,7 +55,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const SamsungForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -77,7 +79,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const OppoForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -101,7 +103,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const LGForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -125,7 +127,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const XiaomeForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/problem_form_screen/iPad_form.dart';
-import 'package:it_support/screens/problem_form_screen/imac_form.dart';
-import 'package:it_support/screens/problem_form_screen/macbook_form.dart';
+import 'package:it_support/screens/problem_form_screen/macOS/imac_form.dart';
+import 'package:it_support/screens/problem_form_screen/macOS/macbook_form.dart';
 
 class MacOSCategory extends StatefulWidget {
   const MacOSCategory({Key? key}) : super(key: key);

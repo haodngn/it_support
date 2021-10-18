@@ -7,10 +7,11 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
-class IpadForm extends StatelessWidget {
-  const IpadForm({Key? key}) : super(key: key);
+class XiaomeForm extends StatelessWidget {
+  const XiaomeForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,29 +58,29 @@ class MyCustomFormState extends State<Body> {
               child: Column(
                 children: <Widget>[
                   CheckboxFormField(
-                    title: Text("iPad chậm và bàn phím bị lag"),
+                    title: Text("Không kết nối Internet"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
                     title: Text(
-                        "Giao diện màn hình mắc kẹt trong chế độ phong cảnh hoặc chân dung"),
+                        "Không thể tải xuống được ứng dụng trên Google Play"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
                     title: Text(
-                        "Vấn đề hiệu suất, treo, và khởi động lại ngẫu nhiên"),
+                        "Trình quản lý tải xuống của Android không hoạt động"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text("Nút chức năng Home không hoạt động"),
+                    title: Text("Không thể phát video đã tải xuống"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text("Ứng dụng máy ảnh bị treo"),
+                    title: Text("Có phần mềm độc hại trên điện thoại"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
@@ -125,7 +126,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'IPad Pro 11';
+  String dropdownValue = 'Xiaomi Mi Mix';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -137,6 +138,7 @@ class _DropdownControlState extends State<DropdownControl> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return DropdownButtonFormField<String>(
       style: const TextStyle(color: Colors.black),
       isExpanded: true,
@@ -154,12 +156,11 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'IPad Pro 11',
-        'Apple iPad',
-        'iPad mini 5',
-        'Apple iPad Air',
-        'Apple iPad Pro ',
-        'Apple iPad Pro 11',
+        'Xiaomi Mi Mix',
+        'Xiaomi Mi Note ',
+        'Xiaomi Mi',
+        'Xiaomi Redmi Note',
+        'Xiaomi Redmi',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
