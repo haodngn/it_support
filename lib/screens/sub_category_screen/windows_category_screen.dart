@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:it_support/screens/problem_form_screen/windows/acer_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/asus_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/dell_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/hp_form.dart';
 import 'package:it_support/screens/problem_form_screen/windows/laptop_form.dart';
 import 'package:it_support/screens/problem_form_screen/macOS/macbook_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/lenovo_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/msi_form.dart';
 import 'package:it_support/screens/problem_form_screen/windows/pc_form.dart';
 
 class WindowsCategory extends StatefulWidget {
@@ -54,7 +60,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const msiform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -78,7 +84,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const acerform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -102,7 +108,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const asusform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -126,7 +132,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const dellform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -150,7 +156,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const hpform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -174,7 +180,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const lenovoform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
