@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:it_support/constant.dart';
-import 'package:it_support/screens/profile_screen/edit_profile_screen.dart';
+import 'package:it_support/screens/basicproblem/android_screen.dart';
+import 'package:it_support/screens/basicproblem/windows_screen.dart';
+import 'package:it_support/screens/components/search.dart';
 import 'package:it_support/screens/sub_category_screen/ios_category_screen.dart';
 import 'package:it_support/screens/sub_category_screen/android_category_screen.dart';
 import 'package:it_support/screens/sub_category_screen/macOS_category_screen.dart';
@@ -86,6 +88,7 @@ class HomeScreen extends StatelessWidget {
               // SizedBox(
               //   height: 10,
               // ),
+              SearchWidget(hintText: 'Tìm kiếm các lỗi cơ bản.', text: '', onChanged: (String value) {  },),
               buildNewsList(),
               // buildDoctorList(),
             ],
@@ -311,6 +314,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
   buildNewsList(){
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -320,12 +324,14 @@ class HomeScreen extends StatelessWidget {
                 width: 30,
               ),
               InkWell(
-                onTap: () async {
-                  final url = "https://tinhte.vn/thread/huong-dan-cap-nhat-len-windows-11-mien-phi-cach-ep-may-len-windows-11-ngay-hom-nay.3413014/";
-                  if(await canLaunch(url)) {
-                    await launch(url);
-                  }
-                },
+                onTap: () => Get.to(() => WindowsScreen(),
+                    transition: Transition.rightToLeftWithFade,
+                    duration: Duration(milliseconds: 600)),
+                  // final url = "https://tinhte.vn/thread/huong-dan-cap-nhat-len-windows-11-mien-phi-cach-ep-may-len-windows-11-ngay-hom-nay.3413014/";
+                  // if(await canLaunch(url)) {
+                  //   await launch(url);
+                  // }
+
                 child: Stack(
                   children: <Widget>[
                     Card(
@@ -342,58 +348,7 @@ class HomeScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: Text(
-                            'Hướng dẫn cập nhật lên Windows 11',
-                            style: TextStyle(
-                              color: kTitleTextColor,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 17,
-                      child: Container(
-                        height: 200,
-                        width: 200,
-                        // decoration: BoxDecoration(
-                        //   color: kBlueColor,
-                        //   borderRadius: BorderRadius.circular(20),
-                        // ),
-                        child: Image.asset(
-                          'assets/images/new1.jpg',
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              InkWell(
-                onTap: () async {
-                  final url = "https://www.dienmayxanh.com/kinh-nghiem-hay/huong-dan-cai-dat-windows-7-10-don-gian-nhat-ai-cu-1218882";
-                  if(await canLaunch(url)) {
-                    await launch(url);
-                  }
-                },
-                child: Stack(
-                  children: <Widget>[
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Container(
-                        width: 225,
-                        height: 225,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 16,
-                        ),
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            'Hướng dẫn cài đặt Windows 10 bảng quyền.',
+                            'HƯỚNG DẪN CÁCH KHỞI\nĐỘNG MÁY TÍNH NHANH HƠN',
                             style: TextStyle(
                               color: kTitleTextColor,
                             ),
@@ -422,12 +377,15 @@ class HomeScreen extends StatelessWidget {
                 width: 10,
               ),
               InkWell(
-                onTap: () async {
-                  final url = "http://maytinhnamthai.com/tin-tuc/10-loi-may-tinh-thuong-gap-va-cach-khac-phuc/";
-                  if(await canLaunch(url)) {
-                    await launch(url);
-                  }
-                },
+                onTap: () => Get.to(() => AndroidScreen(),
+                    transition: Transition.rightToLeftWithFade,
+                    duration: Duration(milliseconds: 600)),
+                // onTap: () async {
+                //   final url = "https://www.dienmayxanh.com/kinh-nghiem-hay/huong-dan-cai-dat-windows-7-10-don-gian-nhat-ai-cu-1218882";
+                //   if(await canLaunch(url)) {
+                //     await launch(url);
+                //   }
+                // },
                 child: Stack(
                   children: <Widget>[
                     Card(
@@ -444,7 +402,7 @@ class HomeScreen extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.bottomCenter,
                           child: Text(
-                            '10 lỗi máy tính thường gặp và cách khắc phục',
+                            'HƯỚNG DẪN KHÔI PHỤC\nDANH BẠ TRÊN ANDROID',
                             style: TextStyle(
                               color: kTitleTextColor,
                             ),
@@ -461,9 +419,7 @@ class HomeScreen extends StatelessWidget {
                         //   color: kBlueColor,
                         //   borderRadius: BorderRadius.circular(20),
                         // ),
-                        child: Image.asset(
-                          'assets/images/new3.jpg',
-                        ),
+                        child: Image.network("https://hoanghamobile.com/tin-tuc/wp-content/uploads/2019/06/dien-thoai-android-tot-nhat-hien-nay-1.jpg"),
                       ),
                     ),
                   ],

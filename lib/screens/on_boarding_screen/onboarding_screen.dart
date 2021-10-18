@@ -99,12 +99,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Connect people\naround the world',
+                              'Bạn gặp vấn đề\nvề công nghệ.',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Hỗ trợ giải quyết các vấn đề về thiết bị điện tử từ xa.',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -126,12 +126,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Live your life smarter\nwith us!',
+                              'Bạn đang tìm\nngười hỗ trợ',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Hãy để chúng tôi giúp bạn.',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -153,12 +153,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Get a new experience\nof imagination',
+                              'IT Support\nsẽ giúp bạn giải quyết.',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+                              'Tìm được người hỗ trợ cho vấn đề của bạn một cách nhanh và hiệu quả nhất.',
                               style: kSubtitleStyle,
                             ),
                           ],
