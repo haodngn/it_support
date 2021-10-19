@@ -71,21 +71,28 @@ class _BodyState extends State<Body> {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: Text(
-                    "Khách hàng: Nhâm Đức Đạt",
+                    "Khách hàng: Hào Nguyễn",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: Text(
-                    "Vấn đề: máy tính bị hư",
+                    "Vấn đề: không thể kết nối wifi",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 34, 30),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 15),
                   child: Text(
-                    "Thành tiền : 3 xu",
+                    "Thiết bị: Asus",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 34, 0),
+                  child: Text(
+                    "Thành tiền : ",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
