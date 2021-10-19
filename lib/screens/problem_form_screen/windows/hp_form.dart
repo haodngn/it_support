@@ -9,8 +9,8 @@ import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
-class IpadForm extends StatelessWidget {
-  const IpadForm({Key? key}) : super(key: key);
+class hpform extends StatelessWidget {
+  const hpform({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,29 +57,28 @@ class MyCustomFormState extends State<Body> {
               child: Column(
                 children: <Widget>[
                   CheckboxFormField(
-                    title: Text("iPad chậm và bàn phím bị lag"),
+                    title: Text("Máy bị màn hình xanh"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Giao diện màn hình mắc kẹt trong chế độ phong cảnh hoặc chân dung"),
+                    title: Text("Ứng dụng hay gặp sự cố và bị treo"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Vấn đề hiệu suất, treo, và khởi động lại ngẫu nhiên"),
+                    title:
+                        Text("Máy không lên nguồn hoặc không khởi động được"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text("Nút chức năng Home không hoạt động"),
+                    title: Text("Windows bị lỗi"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text("Ứng dụng máy ảnh bị treo"),
+                    title: Text("Lỗi không kết nối mạng"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
@@ -125,7 +124,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'IPad Pro 11';
+  String dropdownValue = 'HP ProBook 348 G5';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -137,6 +136,7 @@ class _DropdownControlState extends State<DropdownControl> {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return DropdownButtonFormField<String>(
       style: const TextStyle(color: Colors.black),
       isExpanded: true,
@@ -154,12 +154,12 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'IPad Pro 11',
-        'Apple iPad',
-        'iPad mini 5',
-        'Apple iPad Air',
-        'Apple iPad Pro ',
-        'Apple iPad Pro 11',
+        'HP ProBook 348 G5',
+        'HP Probook 13 i5 8265U',
+        'HP EliteBook X360 1040 G5',
+        'HP Envy 13 6ZF26PA ',
+        'HP Elitebook X360 1030 G3 5AS42PA',
+        
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,

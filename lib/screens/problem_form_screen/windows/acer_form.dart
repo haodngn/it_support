@@ -9,8 +9,8 @@ import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
-class TabletForm extends StatelessWidget {
-  const TabletForm({Key? key}) : super(key: key);
+class acerform extends StatelessWidget {
+  const acerform({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,30 +57,28 @@ class MyCustomFormState extends State<Body> {
               child: Column(
                 children: <Widget>[
                   CheckboxFormField(
-                    title: Text("Không kết nối Internet"),
+                    title: Text("Máy bị màn hình xanh"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Không thể tải xuống được ứng dụng trên Google Play"),
+                    title: Text("Ứng dụng hay gặp sự cố và bị treo"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Trình quản lý tải xuống của Android không hoạt động"),
+                    title:
+                        Text("Máy không lên nguồn hoặc không khởi động được"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text("Không thể phát video đã tải xuống"),
+                    title: Text("Windows bị lỗi"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Vấn đề hiệu suất, treo, và khởi động lại ngẫu nhiên"),
+                    title: Text("Lỗi không kết nối mạng"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
@@ -126,7 +124,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'Samsung Galaxy Tab A8 T295';
+  String dropdownValue = 'Laptop Acer Spin 3 SP314';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -156,14 +154,14 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'Samsung Galaxy Tab A8 T295',
-        'Samsung Galaxy Tab A 10.1 T515',
-        'Huawei Mediapad T5 ',
-        'Lenovo Tab 4 8 inch 16GB (TB-8504X)',
-        'Huawei MediaPad T3 16GB',
-        'Samsung Galaxy Tab A7 ',
-        'Xiaomi Mipad 4 Plus',
-        'Huawei MatePad T10s',
+        'Laptop Acer Spin 3 SP314',
+        'Laptop Acer Spin 5 SP513',
+        'Laptop Acer Aspire A315 54 558R',
+        'Laptop Acer Aspire A515',
+        'Laptop Acer Aspire A515 54 59KT',
+        'Acer Nitro AN515',
+        'Acer Swift SF315 52 38YQ',
+        'Acer Swift SF314 56 38UE',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,

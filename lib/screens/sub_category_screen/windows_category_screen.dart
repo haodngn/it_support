@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/problem_form_screen/laptop_form.dart';
-import 'package:it_support/screens/problem_form_screen/macbook_form.dart';
-import 'package:it_support/screens/problem_form_screen/pc_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/acer_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/asus_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/dell_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/hp_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/laptop_form.dart';
+import 'package:it_support/screens/problem_form_screen/macOS/macbook_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/lenovo_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/msi_form.dart';
+import 'package:it_support/screens/problem_form_screen/windows/pc_form.dart';
 
 class WindowsCategory extends StatefulWidget {
   const WindowsCategory({Key? key}) : super(key: key);
@@ -31,15 +37,15 @@ Body(size) {
   return Container(
     width: double.infinity,
     height: size.height,
-    child: Stack(
-      alignment: Alignment.center,
+    child: ListView(
+      // alignment: Alignment.center,
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 110),
+            SizedBox(height: 30),
             Material(
               clipBehavior: Clip.hardEdge,
               borderRadius: BorderRadius.circular(29),
@@ -48,13 +54,13 @@ Body(size) {
                 fit: StackFit.passthrough,
                 children: [
                   Ink.image(
-                    image: const AssetImage('assets/images/laptop.jpg'),
+                    image: const AssetImage('assets/images/msi.jpg'),
                     fit: BoxFit.cover,
-                    height: 200,
+                    height: 100,
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const LaptopForm(),
+                        Get.to(() => const msiform(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -63,7 +69,127 @@ Body(size) {
                 ],
               ),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 30),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/acer.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const acerform(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/asus.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const asusform(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/dell.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const dellform(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/HP.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const hpform(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
+            Material(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: BorderRadius.circular(29),
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                fit: StackFit.passthrough,
+                children: [
+                  Ink.image(
+                    image: const AssetImage('assets/images/Lenovo.jpg'),
+                    fit: BoxFit.cover,
+                    height: 100,
+                    width: 300,
+                    child: InkWell(
+                      onTap: () => {
+                        Get.to(() => const lenovoform(),
+                            transition: Transition.rightToLeftWithFade,
+                            duration: Duration(milliseconds: 600))
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 30),
             Material(
               clipBehavior: Clip.hardEdge,
               borderRadius: BorderRadius.circular(29),
@@ -74,7 +200,7 @@ Body(size) {
                   Ink.image(
                     image: const AssetImage('assets/images/pc.jpg'),
                     fit: BoxFit.cover,
-                    height: 200,
+                    height: 100,
                     width: 300,
                     child: InkWell(
                       onTap: () => {

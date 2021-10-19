@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:it_support/screens/problem_form_screen/ipad_form.dart';
-import 'package:it_support/screens/problem_form_screen/iphone_form.dart';
+import 'package:it_support/screens/problem_form_screen/iOS/ipad_form.dart';
+import 'package:it_support/screens/problem_form_screen/iOS/iphone_form.dart';
 import 'package:get/get.dart';
 
 class iOSCategory extends StatefulWidget {
@@ -30,8 +30,7 @@ Body(size) {
   return Container(
     width: double.infinity,
     height: size.height,
-    child: Stack(
-      alignment: Alignment.center,
+    child: ListView(
       children: <Widget>[
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
