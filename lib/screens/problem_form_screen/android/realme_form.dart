@@ -7,10 +7,11 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
+import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
-class TabletForm extends StatelessWidget {
-  const TabletForm({Key? key}) : super(key: key);
+class RealmeForm extends StatelessWidget {
+  const RealmeForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -79,8 +80,7 @@ class MyCustomFormState extends State<Body> {
                     validator: (bool? value) {},
                   ),
                   CheckboxFormField(
-                    title: Text(
-                        "Vấn đề hiệu suất, treo, và khởi động lại ngẫu nhiên"),
+                    title: Text("Có phần mềm độc hại trên điện thoại"),
                     onSaved: (bool? newValue) {},
                     validator: (bool? value) {},
                   ),
@@ -126,7 +126,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'Samsung Galaxy Tab A8 T295';
+  String dropdownValue = 'Xiaomi Mi Mix';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -156,14 +156,11 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'Samsung Galaxy Tab A8 T295',
-        'Samsung Galaxy Tab A 10.1 T515',
-        'Huawei Mediapad T5 ',
-        'Lenovo Tab 4 8 inch 16GB (TB-8504X)',
-        'Huawei MediaPad T3 16GB',
-        'Samsung Galaxy Tab A7 ',
-        'Xiaomi Mipad 4 Plus',
-        'Huawei MatePad T10s',
+        'Xiaomi Mi Mix',
+        'Xiaomi Mi Note ',
+        'Xiaomi Mi',
+        'Xiaomi Redmi Note',
+        'Xiaomi Redmi',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,

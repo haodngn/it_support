@@ -10,8 +10,8 @@ import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
-class VivoForm extends StatelessWidget {
-  const VivoForm({Key? key}) : super(key: key);
+class HuaweiForm extends StatelessWidget {
+  const HuaweiForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +126,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'X70 Pro';
+  String dropdownValue = 'Xiaomi Mi Mix';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -156,15 +156,11 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'X70 Pro',
-        'Y21',
-        'Y21s',
-        'V21',
-        'Vivo',
-        'Huawei',
-        'Motorola',
-        'Realme',
-        'TECNO',
+        'Xiaomi Mi Mix',
+        'Xiaomi Mi Note ',
+        'Xiaomi Mi',
+        'Xiaomi Redmi Note',
+        'Xiaomi Redmi',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,

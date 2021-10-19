@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:it_support/screens/problem_form_screen/android/cellphone_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/huawei_form.dart';
 import 'package:it_support/screens/problem_form_screen/android/lg_form.dart';
 import 'package:it_support/screens/problem_form_screen/android/oppo_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/realme_form.dart';
 import 'package:it_support/screens/problem_form_screen/android/samsung_form.dart';
+import 'package:it_support/screens/problem_form_screen/android/vivo_form.dart';
 import 'package:it_support/screens/problem_form_screen/android/xiaome_form.dart';
 
 class AndroidCategory extends StatefulWidget {
@@ -151,7 +153,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const VivoForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -175,7 +177,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const HuaweiForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
@@ -199,7 +201,7 @@ Body(size) {
                     width: 300,
                     child: InkWell(
                       onTap: () => {
-                        Get.to(() => const CellphoneForm(),
+                        Get.to(() => const RealmeForm(),
                             transition: Transition.rightToLeftWithFade,
                             duration: Duration(milliseconds: 600))
                       },
