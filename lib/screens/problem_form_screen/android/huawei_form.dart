@@ -126,7 +126,7 @@ class DropdownControl extends StatefulWidget {
 }
 
 class _DropdownControlState extends State<DropdownControl> {
-  String dropdownValue = 'Xiaomi Mi Mix';
+  String dropdownValue = 'HUAWEI P40 Pro+';
   // To show Selected Item in Text.
   String holder = '';
 
@@ -156,11 +156,13 @@ class _DropdownControlState extends State<DropdownControl> {
         });
       },
       items: <String>[
-        'Xiaomi Mi Mix',
-        'Xiaomi Mi Note ',
-        'Xiaomi Mi',
-        'Xiaomi Redmi Note',
-        'Xiaomi Redmi',
+        'HUAWEI P40 Pro+',
+        'HUAWEI P40 Pro.',
+        'HUAWEI P40.',
+        'HUAWEI Mate 30 Pro',
+        'HUAWEI Y6p.',
+        'HUAWEI nova 7i.',
+        'HUAWEI P30 Pro.'
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
