@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:it_support/models/message_model.dart';
 import 'package:it_support/screens/chat_screen/chat_screen.dart';
 import 'package:it_support/screens/components/rounded_input_field.dart';
 
@@ -7,6 +6,7 @@ import 'dart:ui';
 
 import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
+import 'package:it_support/screens/problem_form_screen/waiting_screen.dart';
 
 class PcForm extends StatelessWidget {
   const PcForm({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class Body extends StatefulWidget {
 class MyCustomFormState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    final Message chat = chats[1];
+    
     return SafeArea(
       child: SingleChildScrollView(
         // physics: ClampingScrollPhysics(),
@@ -154,7 +154,7 @@ class MyCustomFormState extends State<Body> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ChatScreen(user: chat.sender),
+                          builder: (context) => waitingscreen(),
                         ),
                       );
                       print("chat");

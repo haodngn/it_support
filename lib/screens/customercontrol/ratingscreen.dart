@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:it_support/screens/bottom_nav_bar_screen.dart';
 import 'package:it_support/screens/home_screen.dart';
 
 class ratingScreen extends StatefulWidget {
@@ -76,14 +77,17 @@ class _BodyState extends State<Body> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
+                    padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
                     child: TextField(                   
-                      decoration: InputDecoration(                      
+                      decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: "Nhận xét",
                         hintText: "Hãy nhập nhận xét của bạn"
                       ),
+                      keyboardType: TextInputType.multiline,
+                maxLines: null,
                     ),
+
                   ),
                   Container(
                     child: Row(
@@ -131,6 +135,6 @@ class _BodyState extends State<Body> {
         ));
   }
   Widget gotoHome(BuildContext context) {
-    return HomeScreen();
+    return BottomNavScreen();
   }
 }
