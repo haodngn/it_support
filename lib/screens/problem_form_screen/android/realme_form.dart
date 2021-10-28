@@ -11,6 +11,7 @@ import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/customercontrol/acceptfeescreen.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
+import 'package:it_support/screens/problem_form_screen/waiting_screen.dart';
 
 class RealmeForm extends StatelessWidget {
   const RealmeForm({Key? key}) : super(key: key);
@@ -138,7 +139,7 @@ class MyCustomFormState extends State<Body> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ChatScreen(user: chat.sender),
+                          builder: (context) => waitingscreen(),
                         ),
                       );
                       print("chat");
