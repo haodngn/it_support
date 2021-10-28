@@ -65,35 +65,6 @@ class MyCustomFormState extends State<Body> {
               child: Text('Gửi yêu cầu'),
             ),
             SizedBox(height: 20),
-            Divider(color: Colors.black),
-            SizedBox(height: 20),
-            Text("Lựa chọn khác"),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                IconButton(
-                  splashColor: Colors.grey[50],
-                  padding: new EdgeInsets.all(50),
-                  alignment: Alignment.center,
-                  icon: const Icon(Icons.question_answer, size: 60),
-                  color: Colors.blue[600],
-                  onPressed: () {
-                    print("message");
-                  },
-                ),
-                IconButton(
-                  splashColor: Colors.grey[50],
-                  padding: new EdgeInsets.all(50),
-                  alignment: Alignment.center,
-                  icon: const Icon(Icons.video_call, size: 70),
-                  color: Colors.blue[600],
-                  onPressed: () {
-                    print("video call");
-                  },
-                ),
-              ],
-            ),
           ],
         ),
       ),
@@ -182,4 +153,8 @@ class CustomContainerTextField extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget continueToRequestTool(BuildContext context) {
+  return RequestTool();
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:it_support/models/message_model.dart';
 import 'package:it_support/screens/bottom_nav_bar_screen.dart';
+import 'package:it_support/screens/chat_screen/chat_screen.dart';
 import 'package:it_support/screens/components/dropdown_button.dart';
 import 'package:it_support/screens/components/rounded_input_field.dart';
 
@@ -38,6 +40,7 @@ class Body extends StatefulWidget {
 class MyCustomFormState extends State<Body> {
   @override
   Widget build(BuildContext context) {
+    final Message chat = chats[1];
     return SafeArea(
       child: SingleChildScrollView(
         // physics: ClampingScrollPhysics(),
@@ -102,12 +105,52 @@ class MyCustomFormState extends State<Body> {
               ),
             ),
             SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: continueToRequestTool));
-              },
-              child: Text('Tiếp theo'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: continueToRequestTool));
+                    },
+                    child: Row(
+                      children: const [
+                        Text("Team view"),
+                        Text(" "),
+                        Icon(Icons.slideshow),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatScreen(user: chat.sender),
+                        ),
+                      );
+                      print("chat");
+                    },
+                    child: Row(
+                      children: const [
+                        Text("Chat / Call"),
+                        Text(" "),
+                        Icon(Icons.video_call),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
