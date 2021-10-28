@@ -16,7 +16,7 @@ class RequestTool extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Chi tiết về vấn đề của bạn ",
+          "Phương thức hỗ trợ",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -43,26 +43,56 @@ class MyCustomFormState extends State<Body> {
         child: Column(
           children: <Widget>[
             const DropdownControl(),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             TextFormField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "ID",
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             TextFormField(
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: "Password",
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: gotoload));
               },
               child: Text('Gửi yêu cầu'),
+            ),
+            SizedBox(height: 20),
+            Divider(color: Colors.black),
+            SizedBox(height: 20),
+            Text("Lựa chọn khác"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  splashColor: Colors.grey[50],
+                  padding: new EdgeInsets.all(50),
+                  alignment: Alignment.center,
+                  icon: const Icon(Icons.question_answer, size: 60),
+                  color: Colors.blue[600],
+                  onPressed: () {
+                    print("message");
+                  },
+                ),
+                IconButton(
+                  splashColor: Colors.grey[50],
+                  padding: new EdgeInsets.all(50),
+                  alignment: Alignment.center,
+                  icon: const Icon(Icons.video_call, size: 70),
+                  color: Colors.blue[600],
+                  onPressed: () {
+                    print("video call");
+                  },
+                ),
+              ],
             ),
           ],
         ),
@@ -115,7 +145,6 @@ class _DropdownControlState extends State<DropdownControl> {
       items: <String>[
         'TeamViewer',
         'UltraViewer',
-        'Video call',
       ].map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
