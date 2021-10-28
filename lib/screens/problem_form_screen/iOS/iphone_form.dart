@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:it_support/screens/bottom_nav_bar_screen.dart';
-import 'package:it_support/screens/components/dropdown_button.dart';
+import 'package:it_support/models/message_model.dart';
+import 'package:it_support/models/user_model.dart';
+import 'package:it_support/screens/chat_screen/chat_screen.dart';
 import 'package:it_support/screens/components/rounded_input_field.dart';
 
 import 'dart:ui';
 
-import 'package:it_support/screens/components/check_box.dart';
 import 'package:it_support/screens/components/load_image.dart';
 import 'package:it_support/screens/problem_form_screen/request_tool_form.dart';
 
@@ -36,6 +36,7 @@ class Body extends StatefulWidget {
 
 // Create a corresponding State class, which holds data related to the form.
 class MyCustomFormState extends State<Body> {
+  final Message chat = chats[1];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -90,23 +91,63 @@ class MyCustomFormState extends State<Body> {
             CustomContainerImage(
               labelText: 'Thêm ảnh minh họa ',
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(7),
                 ),
                 border: Border.all(color: Colors.black, width: 1),
               ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                 child: LoadImage(),
               ),
             ),
             SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: continueToRequestTool));
-              },
-              child: Text('Tiếp theo'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: continueToRequestTool));
+                    },
+                    child: Row(
+                      children: const [
+                        Text("Team view"),
+                        Text(" "),
+                        Icon(Icons.slideshow),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: FlatButton(
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatScreen(user: chat.sender),
+                        ),
+                      );
+                      print("chat");
+                    },
+                    child: Row(
+                      children: const [
+                        Text("Chat / Call"),
+                        Text(" "),
+                        Icon(Icons.video_call),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
