@@ -13,7 +13,7 @@ class fixingscreen extends StatefulWidget {
 class _fixingscreenState extends State<fixingscreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 10), () {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => billscreen()));
     });
