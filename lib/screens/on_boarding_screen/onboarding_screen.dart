@@ -187,7 +187,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 Text(
-                                  'Next',
+                                  'Tiếp theo',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 22.0,
@@ -225,7 +225,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 30.0),
                     child: Text(
-                      'Get started',
+                      'Bắt đầu',
                       style: TextStyle(
                         color: Color(0xFF5B16D0),
                         fontSize: 20.0,

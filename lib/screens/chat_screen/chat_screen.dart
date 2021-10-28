@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:it_support/models/message_model.dart';
 import 'package:it_support/models/user_model.dart';
+import 'package:it_support/screens/call_screen/videocall_screen.dart';
+import 'package:it_support/screens/customercontrol/ratingscreen.dart';
 
 class ChatScreen extends StatefulWidget {
   final User user;
@@ -219,6 +222,15 @@ class _ChatScreenState extends State<ChatScreen> {
             ],
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.call),
+            tooltip: 'Video call',
+            onPressed: () => Get.to(() => CallScreen(),
+                transition: Transition.rightToLeftWithFade,
+                duration: Duration(milliseconds: 600)),
+          ),
+        ],
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             color: Colors.white,
@@ -241,6 +253,19 @@ class _ChatScreenState extends State<ChatScreen> {
                 return _chatBubble(message, isMe, isSameUser);
               },
             ),
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          TextButton(
+            style: TextButton.styleFrom(primary: Colors.blue),
+            // style: ButtonStyle(
+            //   foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+            // ),
+            onPressed: () => Get.to(() => ratingScreen(),
+                transition: Transition.rightToLeftWithFade,
+                duration: Duration(milliseconds: 600)),
+            child: Text('Đánh giá'),
           ),
           _sendMessageArea(),
         ],
