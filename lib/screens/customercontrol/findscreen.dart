@@ -13,7 +13,7 @@ class findscreen extends StatefulWidget {
 class _findscreenState extends State<findscreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 7), () {
       Navigator.push(
     context, MaterialPageRoute(builder: (context) => fixingscreen()));
     });
